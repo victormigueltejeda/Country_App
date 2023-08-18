@@ -1,1 +1,28 @@
-<p>by-country-page works!</p>
+<h2>Por Pais</h2>
+<hr />
+
+<div>
+  <div class="row">
+    <div class="col">
+      <!-- SearchBox-->
+      <shared-search-box
+        [initialValue]="initialValue"
+        (onDebounce)="searchByCapital($event)"
+        placeholder="Buscar por Region"
+      ></shared-search-box>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <!---->
+    <hr />
+    <ul>
+      <countries-table
+        messageError="No hay region para Mostrar"
+        [countries]="country"
+      ></countries-table>
+    </ul>
+  </div>
+</div>
